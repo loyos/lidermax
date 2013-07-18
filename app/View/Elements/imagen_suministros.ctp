@@ -1,0 +1,1 @@
+<?php echo $this->Html->image('contacto.jpg'); ?>

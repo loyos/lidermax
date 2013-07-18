@@ -1,0 +1,5 @@
+<?php
+echo "Te han contactado a través de la página Web de Lidermax";
+echo '<br><br>';
+echo  "<table><tr><td style='color: #51C1D3;font-size: 15px;height: auto; margin-top: 0; padding: 0;font-weight: bold;'>Nombre</td>".$nombre."</tr><tr><td style='color: #51C1D3;font-size: 15px;height: auto; margin-top: 0; padding: 0;font-weight: bold;'>Ciudad</td><td>".$ciudad."</td></tr><tr><td style='color: #51C1D3;font-size: 15px;height: auto; margin-top: 0; padding: 0;font-weight: bold;'>Correo</td><td>".$correo."</td></tr><tr><td style='color: #51C1D3;font-size: 15px;height: auto; margin-top: 0; padding: 0;font-weight: bold;'>Mensaje</td><td>".$mensaje."</td></tr><tr><td style='color: #51C1D3;font-size: 15px;height: auto; margin-top: 0; padding: 0;font-weight: bold;'>Empresa</td>".$empresa."</tr></table>";
+?>
