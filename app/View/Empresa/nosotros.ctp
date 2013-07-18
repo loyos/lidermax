@@ -11,19 +11,18 @@
 					<td><?php echo $this->Html->image($e['Empleado']['foto'], array('class' => 'foto_empleado')); ?></td>
 					<td>
 						<table>
-							<tr><th>Nombre:</th><td><?php echo $e['Empleado']['nombre'].' '.$e['Empleado']['apellido']?></td></tr>
-							<tr><th>Profesión:</th><td><?php echo $e['Empleado']['telefono']?></td></tr>
+							<tr><th><?php echo $e['Empleado']['nombre'].' '.$e['Empleado']['apellido']?></th></tr>
+							<tr><th><?php echo $e['Empleado']['telefono']?></th></tr>
 						</table>
 					</td>
 					<td class="descripcion_empleado">
 						<table>
 							<tr>
-								<th>Descripción: </th>
 								<td><?php echo $e['Empleado']['resumen_cv']?></td>
 							</tr>
 						</table>
 					</td>
-					<td><?php 
+					<td style = "font-size: 11px;"><?php 
 					$this->Html->link('Enter', array('class' => 'button', 'target' => '_blank'));
 					echo $this->Html->link('Ver Curriculum',array('controller' => 'empresa', 'action' => 'sendFile', $e['Empleado']['cv']))?></td>
 				</tr>
