@@ -1,4 +1,6 @@
 <?php
+
+
 /**
  *
  * PHP 5
@@ -131,7 +133,16 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						</ul>
 				</li>
 				<li id = "capacitacion">
-					<?php echo $this->Html->link('CAPACITACIÓN', array('controller' => 'capacitacion', 'action'=> 'lidermax',$primer_curso));?>
+					<?php echo $this->Html->link('FORMACIÓN', array('controller' => 'capacitacion', 'action'=> 'lidermax',$primer_curso));?>
+						<ul id = "capacitacion_ul" class = "ulul">
+							<?php
+								foreach($menu_capacitacion as $cap){
+									echo '<li>'. $this->Html->link($cap['Curso']['nombre'], array('controller' => 'capacitacion', 'action'=> 'lidermax', $cap['Curso']['id'])). '</li>';
+								}
+							
+							?>
+						</ul>
+					
 					<!-- 	<ul id = "capacitacion_ul" class = "ulul">
 							<li><?php // echo $this->Html->link('Aire Acondicionado', array('controller' => 'capacitacion', 'action'=> 'lidermax',31));?></li>
 							<li><?php // echo $this->Html->link('Ventilación Forzada', array('controller' => 'capacitacion', 'action'=> 'lidermax',32));?></li>

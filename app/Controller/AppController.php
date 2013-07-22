@@ -38,5 +38,7 @@ class AppController extends Controller {
 		$primer_curso = $this->Curso->find('first');
 		$primer_curso = $primer_curso['Curso']['id'];
 		$this->set(compact('primer_curso'));
+		$menu_capacitacion = $this->Curso->find('all');
+		$this->set(compact('menu_capacitacion'));
 	}
 }
