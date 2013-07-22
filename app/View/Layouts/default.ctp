@@ -142,18 +142,6 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 							
 							?>
 						</ul>
-					
-					<!-- 	<ul id = "capacitacion_ul" class = "ulul">
-							<li><?php // echo $this->Html->link('Aire Acondicionado', array('controller' => 'capacitacion', 'action'=> 'lidermax',31));?></li>
-							<li><?php // echo $this->Html->link('Ventilación Forzada', array('controller' => 'capacitacion', 'action'=> 'lidermax',32));?></li>
-							<li><?php // echo $this->Html->link('Protección contra Incendios', array('controller' => 'capacitacion', 'action'=> 'lidermax',33));?></li>
-							<li><?php // echo $this->Html->link('Gases Medicinales', array('controller' => 'capacitacion', 'action'=> 'lidermax',34));?></li>
-							<li><?php // echo $this->Html->link('Bombas Hidráulicas', array('controller' => 'capacitacion', 'action'=> 'lidermax',35));?></li>
-							<li><?php // echo $this->Html->link('Mantenimiento', array('controller' => 'capacitacion', 'action'=> 'lidermax',36));?></li>
-							<li><?php // echo $this->Html->link('Gerencia Proy. / Estratégica', array('controller' => 'capacitacion', 'action'=> 'lidermax',37));?></li>
-							<li><?php // echo $this->Html->link('Soldadura', array('controller' => 'capacitacion', 'action'=> 'lidermax',38));?></li>
-							<li><?php // echo $this->Html->link('Ensayos No Destructivos', array('controller' => 'capacitacion', 'action'=> 'lidermax',39));?></li>
-						</ul> -->
 				</li>
 			</ul>
 		</div>

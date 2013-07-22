@@ -11,9 +11,9 @@ $(document).ready(function() {
 			if($i == 0){ ?> 
 			<a class="fancybox primera" href="/img/<?php echo $p['Imagene']['imagen']?>" data-fancybox-group="<?php echo $contenidos['Contenido']['id']?>">
 			<img src="/img/<?php echo $p['Imagene']['imagen']?>" alt="" class="img_right"/>
-			<div class= "galeria">
+			<!-- <div class= "galeria">
 				Ver fotos
-			</div>
+			</div> -->
 			</a>
 			<?php
 			} else { ?>
