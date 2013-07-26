@@ -36,8 +36,10 @@ class AppController extends Controller {
 	
 	function beforefilter() {
 		$cursos = $this->Curso->find('first');
-		$primer_curso = $cursos['Curso']['id'];
-		$this->set(compact('primer_curso'));
+		if(!empty($cursos)){
+			$primer_curso = $cursos['Curso']['id'];	
+			$this->set(compact('primer_curso'));
+		}
 		$menu_capacitacion = $this->Curso->find('all');
 		$this->set(compact('menu_capacitacion'));
 	}
