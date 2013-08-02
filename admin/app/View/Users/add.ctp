@@ -8,6 +8,6 @@
             'options' => array('admin' => 'Admin', 'author' => 'Author')
         ));
     ?>
+		<?php echo $this->Form->end(__('Submit')); ?>
     </fieldset>
-<?php echo $this->Form->end(__('Submit')); ?>
 </div>
