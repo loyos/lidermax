@@ -38,7 +38,12 @@ body {
 width: 200px;
 }
 
-
+.form fieldset{
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
 
 .menu {
 	background-image: url('../img/menu.gif');

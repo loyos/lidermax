@@ -49,8 +49,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<?php echo $this->Html->image('/logo_text.png', array('width' => '400px')); ?>
 				</div>
 				<div id="contacto">
-					<?php echo $this->Html->link('Contáctenos',array('controller' => 'empresa', 'action' => 'edit', 44)); ?>
-				</div>
+					<?php echo $this->Html->link('Contáctenos',array('controller' => 'empresa', 'action' => 'edit', 44)); ?> <br>
+					<?php echo $this->Html->link('Cerrar Sesión', array('controller' => 'users', 'action'=> 'logout')); ?> 
+				</div>				
 			</div>
 			<ul class = "menu">
 				<li id= "home">
