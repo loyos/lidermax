@@ -2,7 +2,7 @@
 <div class= "vertical_menu">
 	
 	<div class= "title">
-		Capacitación
+		Formación Profesional
 	</div>
 	<ul>
 		<?php

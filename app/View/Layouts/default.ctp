@@ -55,9 +55,19 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				<div id= "logo">
 				<?php echo $this->Html->image('logo_text.png', array('width' => '400px')); ?>
 				</div>
+				<div class = "social">
+						<?php
+							echo $this->Html->image('logos/twitter_logo.png', array('width' => '25px', 'url' => 'https://twitter.com/INGENIERIALIDER'));
+							echo "  ";
+							echo $this->Html->image('logos/facebook_logo.png', array('width' => '25px', 'url' => 'https://www.facebook.com/IngenieriaLidermax')); 
+						?>
+					</div>
+				
 				<div id="contacto">
 					<?php echo $this->Html->link('Contáctanos',array('controller' => 'index', 'action' => 'contacto')); ?>
+					
 				</div>
+				
 				<div id="busqueda">
 					<?php
 					echo $this->Form->create('Busqueda',array('action' => 'contacto'));
@@ -66,6 +76,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 						'value' => null
 					));
 					?>
+					
 				</div>
 				<?php
 				echo $this->Form->submit('', array('class' => 'icono_busqueda'));

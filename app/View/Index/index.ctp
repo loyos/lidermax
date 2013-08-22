@@ -57,11 +57,10 @@
 
 <div class= "index_content">
 	<div class= "index_content_top">
-		Somos Profesionales, Competitivos y Competentes <br>
-		<span>Nuestros servicios son los número 1 a nivel nacional, nos comprometemos a lograr la satisfacción del cliente.</span>		
+		<?php echo $slogan; ?>
 	</div>
 	<div class= "index_button">
-		<?php echo $this->Html->link('Consulta Online',array(
+		<?php echo $this->Html->link('Consulta sin compromiso respuesta inmediata', array(
 			'controller' => 'index',
 			'action' => 'contacto'
 			)

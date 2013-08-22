@@ -7,8 +7,11 @@ class IndexController extends AppController {
 
 
     public function index() {
-       $imagenes = $this->Galeria->find('all');
-	   $this->set(compact('imagenes'));
+		$slogan = $this->Config->find('first');
+		$slogan = $slogan['Config']['slogan'];
+		$this->set(compact('slogan'));
+		$imagenes = $this->Galeria->find('all');
+		$this->set(compact('imagenes'));
     }
 
 	public function contacto(){

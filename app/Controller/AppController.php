@@ -32,7 +32,7 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-	var $uses = array('Curso');
+	var $uses = array('Curso', 'Config');
 	
 	function beforefilter() {
 		$cursos = $this->Curso->find('first');
@@ -40,6 +40,7 @@ class AppController extends Controller {
 			$primer_curso = $cursos['Curso']['id'];	
 			$this->set(compact('primer_curso'));
 		}
+		// $this->loadModel('Config');
 		$menu_capacitacion = $this->Curso->find('all');
 		$this->set(compact('menu_capacitacion'));
 	}
