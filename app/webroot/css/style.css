@@ -379,7 +379,31 @@ body {
 	border-radius: 10px;
 }
 
+.documentos_title{
+	font-size: 24px;
+	display: block;
+	margin-bottom: 20px;
+}
 
+.container_documentos table{
+	width: 100%;
+	border: 1px solid #cdcecc;
+	border-radius: 10px;
+	padding: 10px;
+	border-collapse: collapse;
+}
+
+.container_documentos td{
+	border: 1px solid #cdcecc;
+	padding: 10px;
+	text-align: center;
+	font-size: 12px;
+}
+.container_documentos th{
+	border: 1px solid #cdcecc;
+	padding: 10px;
+	font-size: 13px;
+}
 
 .view_content_text {
 	border-top: 1px solid #cdcecc;
@@ -454,14 +478,14 @@ p {
 #contacto {
 	display: block;
 	float: right;
-	margin-right: 20px;
+	margin-right: -20px;
 	margin-top: -7.5%;
 	font-weight: bold;
 }
 
 #contacto a {
 	color:black;
-	font-size:20px;
+	font-size:14px;
 }
 
 #busqueda {
@@ -523,6 +547,30 @@ input.icono_busqueda {
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	height:465px;
+}
+
+.container_documentos{
+	padding: 25px;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 927px;
+	z-index: 1;
+	display: block;
+	background-color: #FFF;
+	border: 1px solid #cdcecc;
+	font: normal 99.5%/1.5 Helvetica, Arial, sans-serif;
+	letter-spacing:0;
+	color:#434343;
+	/* background:#efefef url(../img/background.png) repeat top center; */
+	/* padding:20px 0; */
+	position:relative;
+	text-shadow:0 1px 0 rgba(255,255,255,.8);
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	height:auto;
 }
 
 .form label {

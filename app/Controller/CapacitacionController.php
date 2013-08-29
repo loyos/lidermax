@@ -5,8 +5,9 @@ class CapacitacionController extends AppController {
 	var $uses = array('Contenido','Seccion','Imagene','Curso');
 	
 	public function sendFile($path) {
+		$name = $path;
 		$path = WWW_ROOT.'pdf/'.$path;
-		$this->response->file($path, array('download' => true, 'name' => 'Bombashidráulicas'));
+		$this->response->file($path, array('download' => true, 'name' => $name));
 		//Return reponse object to prevent controller from trying to render a view
 		return $this->response;
 	}

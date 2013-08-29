@@ -65,6 +65,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				
 				<div id="contacto">
 					<?php echo $this->Html->link('Contáctanos',array('controller' => 'index', 'action' => 'contacto')); ?>
+					<?php echo $this->Html->link(' / Documentos',array('controller' => 'pages', 'action' => 'documentos')); ?>
 					
 				</div>
 				
