@@ -2,7 +2,7 @@
 class EmpresaController extends AppController {
     public $helpers = array('Html', 'Form', 'Session');
     public $components = array('Session','JqImgcrop');
-	public $uses = array('Contenido','Seccion','Contacto','Imagene','Empleado','Curso');
+	public $uses = array('Contenido','Seccion','Contacto','Imagene','Empleado','Curso','Documento');
 
 
 	function edit($id,$type=null,$id_delete = null){
@@ -102,9 +102,43 @@ class EmpresaController extends AppController {
 		}
 		$this->set(compact('id'));
     }
+	
+	public function ver_documentos(){
+		$documentos = $this->Documento->find('all');
+		$this->set(compact('documentos'));
+	}
+	
+	public function editar_documentos($id = null){
+		debug($this->data);
+		if(!empty($this->data)) {
+			$data = $this->data;
+			if( $this->data['Documento']['ruta']['error'] == 0 &&  $this->data['Documento']['ruta']['size'] > 0){
+                  // $destino = '/home/ingenili/public_html/app/webroot/pdf/docs'.DS;
+				  
+				  $destino = 'C:/xampp/htdocs/lidermax/app/webroot/pdf' . DS;
+				  debug($destino);
+                  move_uploaded_file($this->data['Documento']['ruta']['tmp_name'], $destino.$this->data['Documento']['ruta']['name']);
+				  $data['Documento']['ruta'] = $this->data['Documento']['ruta']['name'];
+            }
+			$salvo = $this->Documento->save($data);
+			if($salvo){
+				$this->Session->setFlash("El documento se guardo con éxito");
+			}else{
+				$this->Session->setFlash("La documento no se pudo guardar");
+			}
+			$this->redirect(array('action'=>'cursos'));
+		} elseif (!empty($id)) {
+			$this->data = $this->Documento->findById($id);
+		}
+		$this->set(compact('id'));
+	}
 
 	public function eliminar_cursos($id){
 		$this->Curso->delete($id);
+		$this->redirect(array('action' => 'cursos'));
+    }
+	public function eliminar_documentos($id){
+		$this->Documento->delete($id);
 		$this->redirect(array('action' => 'cursos'));
     }
 }
