@@ -115,7 +115,7 @@ class EmpresaController extends AppController {
                   $destino = '/home/ingenili/public_html/app/webroot/pdf/docs'.DS;
 				  
 				  // $destino = 'C:/xampp/htdocs/lidermax/app/webroot/pdf' . DS;
-				  debug($destino);
+				  // debug($destino);
                   move_uploaded_file($this->data['Documento']['ruta']['tmp_name'], $destino.$this->data['Documento']['ruta']['name']);
 				  $data['Documento']['ruta'] = $this->data['Documento']['ruta']['name'];
             }else{
