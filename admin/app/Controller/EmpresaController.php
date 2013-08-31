@@ -109,7 +109,6 @@ class EmpresaController extends AppController {
 	}
 	
 	public function editar_documentos($id = null){
-		debug($this->data);
 		if(!empty($this->data)) {
 			$data = $this->data;
 			if( $this->data['Documento']['ruta']['error'] == 0 &&  $this->data['Documento']['ruta']['size'] > 0){
@@ -119,14 +118,16 @@ class EmpresaController extends AppController {
 				  debug($destino);
                   move_uploaded_file($this->data['Documento']['ruta']['tmp_name'], $destino.$this->data['Documento']['ruta']['name']);
 				  $data['Documento']['ruta'] = $this->data['Documento']['ruta']['name'];
-            }
+            }else{
+				unset($data['Documento']['ruta']);
+			}
 			$salvo = $this->Documento->save($data);
 			if($salvo){
 				$this->Session->setFlash("El documento se guardo con éxito");
 			}else{
 				$this->Session->setFlash("La documento no se pudo guardar");
 			}
-			$this->redirect(array('action'=>'cursos'));
+			$this->redirect(array('action'=>'ver_documentos'));
 		} elseif (!empty($id)) {
 			$this->data = $this->Documento->findById($id);
 		}
